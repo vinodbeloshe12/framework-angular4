@@ -2,7 +2,7 @@
   "name": "framework-angular4",
   "version": "0.0.71",
   "license": "MIT",
-  "main": "framework-angular4/index.js",
+  "main": "node_modules/framework-angular4/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
