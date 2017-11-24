@@ -2,18 +2,27 @@ var clone = require('git-clone');
 var mkdirp = require('mkdirp');
 var path = require('path');
 
-console.log("Going to create directory /tmp/test");
+var curPath = process.cwd();
+var folderName = "framework-angular4";
+var source = "https://github.com/vinodbeloshe12/angular";
+var destination = path.join(curPath, folderName);
+console.log(curPath, "dest", destination);
 
+// download();
 
 module.exports = download
 
-function download(callback) {
-  mkdirp(path.join(process.cwd(), '/framework-angular4'), function (err) {
+function download() {
+  console.log("in download");
+  mkdirp(destination, function (err) {
     if (err) {
-      return console.error(err);
+      console.error(err);
     }
-    console.log("Directory created successfully!");
-    clone('https://github.com/vinodbeloshe12/angular', '../../framework-angular4', callback);
+    else {
+      clone(source, destination, function (cb) {
+        console.log("Directory created successfully!");
+      });
+    }
   });
 
 }
