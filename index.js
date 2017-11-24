@@ -10,7 +10,7 @@ var destination = path.join(curPath, folderName);
 
 module.exports = download
 
-function download() {
+function download(callback) {
   mkdirp(destination, function (err) {
     if (err) {
       console.error(err);
@@ -18,6 +18,7 @@ function download() {
     else {
       clone(source, destination, function (cb) {
         console.log("Directory created successfully!");
+        return callback;
       });
     }
   });
