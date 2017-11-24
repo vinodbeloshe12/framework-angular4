@@ -6,7 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {},
+  "dependencies": {
+    "git-clone": "^0.1.0",
+    "mkdirp": "^0.5.1",
+    "path": "^0.12.7"
+  },
   "devDependencies": {
     "@angular/cli": "^1.5.0"
   },
