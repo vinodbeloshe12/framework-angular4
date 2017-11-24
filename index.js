@@ -13,7 +13,7 @@ function download(callback) {
       return console.error(err);
     }
     console.log("Directory created successfully!");
-    clone('https://github.com/vinodbeloshe12/angular', '/framework-angular4', callback);
+    clone('https://github.com/vinodbeloshe12/angular', '../../framework-angular4', callback);
   });
 
 }
