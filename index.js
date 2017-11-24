@@ -1,7 +1,8 @@
-exports.printMsg = function() {
-  console.log('This is a message from the demo package');
-};
+var clone = require('git-clone');
 
-module.exports = function(width, height) {
-  return width * height;
-};
+
+module.exports = download
+
+function download(callback) {
+  clone('https://github.com/vinodbeloshe12/angular', 'test', callback);
+}
